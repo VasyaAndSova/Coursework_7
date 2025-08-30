@@ -1,0 +1,4 @@
+[
+    {"model": "catalog.category", "pk": 3, "fields": {"name": "Категория1", "description": "Это категория1"}},
+    {"model": "catalog.category", "pk": 4, "fields": {"name": "Категория2", "description": null}},
+]

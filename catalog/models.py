@@ -16,16 +16,21 @@ class Product(models.Model):
         help_text="Введите изображение продукта",
     )
     category = models.ForeignKey(
-        'Category',
+        "Category",
         on_delete=models.SET_NULL,
         verbose_name="Категория продукта",
         help_text="Введите категорию продукта",
         blank=True,
         null=True,
-        related_name='products',
+        related_name="products",
     )
     price = models.DecimalField(
-        decimal_places=2, max_digits=15, verbose_name="Цена за покупку", help_text="Введите цену за покупку"
+        decimal_places=2,
+        max_digits=15,
+        verbose_name="Цена за покупку",
+        help_text="Введите цену за покупку",
+        blank=True,
+        null=True,
     )
     created_at = models.DateField(auto_now_add=True, verbose_name="Дата создания")
     updated_at = models.DateField(auto_now=True, verbose_name="Дата последнего изменения")
