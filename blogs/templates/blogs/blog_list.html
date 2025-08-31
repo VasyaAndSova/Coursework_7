@@ -1,0 +1,28 @@
+{% extends 'catalog/base.html' %}
+{% load my_tags %}
+{% block content %}
+<div class="container">
+    <div class="row text-center">
+        {% for blog in object_list %}
+            <div class="col-3">
+                <div class="card mb-4 box-shadow" style="height: 400px; display: flex; flex-direction: column;">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">{{ blog.title }}</h4>
+                    </div>
+                    <img src="{{ blog.image | media_filter }}" style="max-height: 150px; object-fit: cover; width: 100%;">
+                    <div class="card-body" style="flex-grow: 1; padding-bottom: 10px;">
+                        <p class="list-unstyled mt-3 mb-4 text-center m-3" style="height: 50px;">
+                            {{ blog.content|slice:":100" }}{% if blog.content|length > 100 %}...{% endif %}
+                        </p>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px;">
+                        <a href="{% url 'blog:blog_detail' blog.pk %}" class="btn btn-lg btn-outline-primary">Посмотреть</a>
+                        <a href="{% url 'blog:blog_update' blog.pk %}" class="btn btn-lg btn-outline-primary">Редактировать</a>
+                        <a href="{% url 'blog:blog_delete' blog.pk %}" class="btn btn-lg btn-outline-primary">Удалить</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
