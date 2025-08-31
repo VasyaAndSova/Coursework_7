@@ -13,7 +13,7 @@ class Product(models.Model):
         blank=True,
         null=True,
         verbose_name="Изображение продукта",
-        help_text="Введите изображение продукта",
+        help_text="Загрузите изображение продукта",
     )
     category = models.ForeignKey(
         "Category",
@@ -34,6 +34,12 @@ class Product(models.Model):
     )
     created_at = models.DateField(auto_now_add=True, verbose_name="Дата создания")
     updated_at = models.DateField(auto_now=True, verbose_name="Дата последнего изменения")
+
+    views_counter = models.PositiveIntegerField(
+        verbose_name='Счетчик просмотров',
+        help_text='Укажите количество просмотров',
+        default=0
+    )
 
     class Meta:
         verbose_name = "Продукт"
