@@ -1,10 +1,29 @@
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-    <h5 class="my-0 mr-md-auto font-weight-normal">Skystore</h5>
-    <nav class="ms-auto">
-        <a class="p-2 btn btn-outline-primary" href="{% url 'catalog:product_create' %}">Создать продукт</a>
-        <a class="p-2 btn btn-outline-primary" href="{% url 'catalog:product_list' %}">Главная</a>
-        <a class="p-2 btn btn-outline-primary" href="{% url 'blog:blog_list' %}">Блоги</a>
-        <a class="p-2 btn btn-outline-primary" href="{% url 'blog:blog_create' %}">Создать блог</a>
-        <a class="p-2 btn btn-outline-primary" href="{% url 'catalog:contacts' %}">Контакты</a>
-    </nav>
+<div class="collapse text-bg-dark" id="navbarHeader">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+                <h4>О нас</h4>
+                <p class="text-body-secondary">Проект "Skystore" - это веб-приложение на Python для хранения плагинов и
+                    примеров кода. Пользователи могут их продавать.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+                <h4>Навигация</h4>
+                <ul class="list-unstyled">
+                    <li><a href="{% url 'catalog:product_list' %}" class="text-white">Главная</a></li>
+                    <li><a href="{% url 'catalog:contacts' %}" class="text-white">Контакты</a></li>
+                    <li><a href="{% url 'blog:blog_list' %}" class="text-white">Блог</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+                aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
 </div>
