@@ -1,20 +1,18 @@
 {% extends 'catalog/base.html' %}
-
 {% block content %}
-<div class="container">
-    <div class="row text-center">
-        <div class="col-3">
-            <form class="row" method="post" enctype="multipart/form-data">
-                <div class="card">
-                    <p class="card-text">Действительно Вы хотите удалить блог {{ object.title }}?</p>
-                    <div class="card-body">
-                       {% csrf_token %}
-                    </div>
-                    <button type="submit" class="btn btn-primary">Удалить</button>
-                    <a href="{% url 'blog:blog_list' %}" class="btn btn-lg btn-outline-primary" style="margin-right: 10px;">Отменить</a>
+<div class="row mb-2">
+    <div class="col-md-12">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <p class="card-text mb-auto">Вы действительно хотите удалить: "{{ object.title }}"?</p>
+                <div class="d-flex gap-2 align-items-end">
+                    <form method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Подтвердить</button>
+                        <a href="{% url 'blog:blog_detail' object.pk %}" class="btn btn-primary">Отменить</a>
+                    </form>
                 </div>
-            </form>
-
+            </div>
         </div>
     </div>
 </div>
