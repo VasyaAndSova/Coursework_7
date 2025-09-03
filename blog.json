@@ -1,0 +1,62 @@
+[
+  {
+    "model": "blogs.blog",
+    "pk": 7,
+    "fields": {
+      "title": "Топ-5 плагинов для SEO: Как улучшить видимость вашего сайта",
+      "content": "В этом блоге можно рассмотреть пять лучших плагинов для SEO, таких как Yoast SEO, All in One SEO Pack, Rank Math, SEOPress и Squirrly. Опишите, как каждый из них помогает оптимизировать контент, улучшить мета-теги и повысить рейтинг в поисковых системах. Включите примеры успешных сайтов, использующих эти плагины.",
+      "image": "blog/photo/images.jpeg",
+      "created_at": "2025-09-02",
+      "is_published": true,
+      "views_counter": 0
+    }
+  },
+  {
+    "model": "blogs.blog",
+    "pk": 8,
+    "fields": {
+      "title": "Обеспечение безопасности вашего сайта: Лучшие плагины для защиты WordPress",
+      "content": "В этом посте можно обсудить важность безопасности сайтов на WordPress и представить пять лучших плагинов для защиты, таких как Wordfence Security, Sucuri Security, iThemes Security, Jetpack и MalCare. Опишите функции каждого плагина, такие как брандмауэр, сканирование на наличие вредоносного ПО и мониторинг активности.",
+      "image": "blog/photo/0d951e6e101d47358a5f3479bf39eced.png",
+      "created_at": "2025-09-02",
+      "is_published": true,
+      "views_counter": 6
+    }
+  },
+  {
+    "model": "blogs.blog",
+    "pk": 9,
+    "fields": {
+      "title": "Создание форм без программирования: Лучшие плагины для форм на WordPress",
+      "content": "Этот блог может быть посвящен плагинам для создания форм, таким как Contact Form 7, WPForms, Ninja Forms, Gravity Forms и Formidable Forms. Опишите, как каждый из них позволяет легко создавать контактные формы, опросы и многостраничные формы без необходимости в программировании.",
+      "image": "blog/photo/contact-form-7-vs-ninja-forms.png",
+      "created_at": "2025-09-02",
+      "is_published": true,
+      "views_counter": 0
+    }
+  },
+  {
+    "model": "blogs.blog",
+    "pk": 10,
+    "fields": {
+      "title": "Ускорьте свой сайт: Плагины для кэширования и оптимизации производительности",
+      "content": "В этом посте можно рассмотреть важность скорости загрузки сайта и представить плагины для кэширования и оптимизации производительности, такие как W3 Total Cache, WP Super Cache, Autoptimize и WP Rocket. Объясните, как каждый плагин работает и какие результаты можно ожидать от их использования.",
+      "image": "blog/photo/92452b3c4663b711c72d4e774810be4e.jpg",
+      "created_at": "2025-09-02",
+      "is_published": true,
+      "views_counter": 0
+    }
+  },
+  {
+    "model": "blogs.blog",
+    "pk": 11,
+    "fields": {
+      "title": "Улучшение пользовательского опыта: Плагины для создания слайдеров и галерей",
+      "content": "Этот блог может быть сосредоточен на плагинах для создания слайдеров и галерей изображений, таких как Slider Revolution, MetaSlider, Envira Gallery и NextGEN Gallery. Опишите функции каждого плагина, их настройки и примеры использования на различных сайтах для улучшения визуального восприятия.",
+      "image": "blog/photo/Slider-Pro.jpg",
+      "created_at": "2025-09-02",
+      "is_published": true,
+      "views_counter": 0
+    }
+  }
+]
