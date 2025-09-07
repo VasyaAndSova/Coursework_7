@@ -1,32 +1,22 @@
 from django.db import models
 
+
 # Create your models here.
 class Blog(models.Model):
-    title = models.CharField(
-        max_length=100, verbose_name="Заголовок блога", help_text="Введите заголовок блога"
-    )
-    content = models.TextField(
-        blank=True, null=True, verbose_name="Содержимое блога", help_text="Введите содержимое блога"
-    )
+    title = models.CharField(max_length=100, verbose_name="Заголовок блога")
+    content = models.TextField(blank=True, null=True, verbose_name="Содержимое блога")
     image = models.ImageField(
         upload_to="blog/photo",
         blank=True,
         null=True,
         verbose_name="Превью блога",
-        help_text="Загрузите превью(изображение) блога",
     )
     created_at = models.DateField(auto_now_add=True, verbose_name="Дата создания")
 
-    is_published = models.BooleanField(
-        default=False,
-        verbose_name="Опубликовано",
-        help_text="Укажите, опубликован ли блог"
-    )
+    is_published = models.BooleanField(default=False, verbose_name="Опубликовано")
 
     views_counter = models.PositiveIntegerField(
-        verbose_name='Счетчик просмотров',
-        help_text='Укажите количество просмотров',
-        default=0
+        verbose_name="Счетчик просмотров", help_text="Укажите количество просмотров", default=0
     )
 
     class Meta:

@@ -2,24 +2,18 @@ from django.db import models
 
 
 class Product(models.Model):
-    name = models.CharField(
-        max_length=100, verbose_name="Наименование продукта", help_text="Введите наименование продукта"
-    )
-    description = models.TextField(
-        blank=True, null=True, verbose_name="Описание продукта", help_text="Введите описание продукта"
-    )
+    name = models.CharField(max_length=100, verbose_name="Наименование продукта")
+    description = models.TextField(blank=True, null=True, verbose_name="Описание продукта")
     image = models.ImageField(
         upload_to="product/photo",
         blank=True,
         null=True,
         verbose_name="Изображение продукта",
-        help_text="Загрузите изображение продукта",
     )
     category = models.ForeignKey(
         "Category",
         on_delete=models.SET_NULL,
         verbose_name="Категория продукта",
-        help_text="Введите категорию продукта",
         blank=True,
         null=True,
         related_name="products",
@@ -28,7 +22,6 @@ class Product(models.Model):
         decimal_places=2,
         max_digits=15,
         verbose_name="Цена за покупку",
-        help_text="Введите цену за покупку",
         blank=True,
         null=True,
     )
@@ -36,9 +29,7 @@ class Product(models.Model):
     updated_at = models.DateField(auto_now=True, verbose_name="Дата последнего изменения")
 
     views_counter = models.PositiveIntegerField(
-        verbose_name='Счетчик просмотров',
-        help_text='Укажите количество просмотров',
-        default=0
+        verbose_name="Счетчик просмотров", help_text="Укажите количество просмотров", default=0
     )
 
     class Meta:

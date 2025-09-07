@@ -52,7 +52,7 @@ class ProductForm(ModelForm):
 
     def clean_price(self):
         price = self.cleaned_data.get("price")
-        if price is None or price == '':
+        if price is None or price == "":
             return 0
         elif price < 0:
             raise ValidationError("Стоимость не может быть отрицательной")

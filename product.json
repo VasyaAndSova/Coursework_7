@@ -1,54 +1,86 @@
 [
-    {
-        "model": "catalog.product",
-        "pk": 8,
-        "fields": {
-            "name": "Продукт1",
-            "description": null,
-            "image": "",
-            "category": 3,
-            "price": "56.78",
-            "created_at": "2025-08-29",
-            "updated_at": "2025-08-29",
-        },
-    },
-    {
-        "model": "catalog.product",
-        "pk": 9,
-        "fields": {
-            "name": "Продукт2",
-            "description": null,
-            "image": "",
-            "category": 4,
-            "price": null,
-            "created_at": "2025-08-29",
-            "updated_at": "2025-08-29",
-        },
-    },
-    {
-        "model": "catalog.product",
-        "pk": 10,
-        "fields": {
-            "name": "Продукт3",
-            "description": "",
-            "image": "",
-            "category": null,
-            "price": "56.90",
-            "created_at": "2025-08-29",
-            "updated_at": "2025-08-29",
-        },
-    },
-    {
-        "model": "catalog.product",
-        "pk": 11,
-        "fields": {
-            "name": "Продукт4",
-            "description": null,
-            "image": "",
-            "category": null,
-            "price": "1.23",
-            "created_at": "2025-08-29",
-            "updated_at": "2025-08-29",
-        },
-    },
+  {
+    "model": "catalog.product",
+    "pk": 28,
+    "fields": {
+      "name": "Yoast SEO",
+      "description": "Yoast SEO — один из самых популярных плагинов для оптимизации сайтов на WordPress. Он помогает улучшить видимость сайта в поисковых системах, предоставляет рекомендации по оптимизации контента и мета-тегов, а также анализирует читаемость текста.",
+      "image": "product/photo/Yoast_SEO_logo_kxItUTB.png",
+      "category": 13,
+      "price": "89.00",
+      "created_at": "2025-09-03",
+      "updated_at": "2025-09-03",
+      "views_counter": 7
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 29,
+    "fields": {
+      "name": "All in One SEO Pack",
+      "description": "All in One SEO Pack — это еще один мощный инструмент для SEO-оптимизации. Он предлагает автоматическую генерацию мета-тегов, поддержку XML-карт и интеграцию с социальными сетями. Этот плагин подходит как для новичков, так и для опытных пользователей.",
+      "image": "product/photo/all_in_one_seo_pack_7Zghivj.png",
+      "category": 13,
+      "price": "49.99",
+      "created_at": "2025-09-03",
+      "updated_at": "2025-09-03",
+      "views_counter": 0
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 30,
+    "fields": {
+      "name": "Wordfence Security",
+      "description": "Wordfence Security — это мощный плагин для защиты сайтов на WordPress. Он включает брандмауэр, антивирус и функции мониторинга трафика. Плагин также предлагает возможность блокировки подозрительных IP-адресов и сканирования на наличие уязвимостей.",
+      "image": "product/photo/images_lkLb0Pn.png",
+      "category": 14,
+      "price": "99.00",
+      "created_at": "2025-09-03",
+      "updated_at": "2025-09-03",
+      "views_counter": 0
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 31,
+    "fields": {
+      "name": "Sucuri Security",
+      "description": "Sucuri Security предлагает комплексное решение для защиты вашего сайта. Плагин включает функции мониторинга безопасности, сканирования вредоносного ПО и жесткой защиты от DDoS-атак. Sucuri также предлагает услуги по очистке и восстановлению после взломов.",
+      "image": "product/photo/Sucuri-Security-Website-Security-Platform-Pricing-Featured-Image_FLnGq0W.jpg",
+      "category": 14,
+      "price": "199.99",
+      "created_at": "2025-09-03",
+      "updated_at": "2025-09-03",
+      "views_counter": 0
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 32,
+    "fields": {
+      "name": "Contact Form 7",
+      "description": "Contact Form 7 — один из самых популярных плагинов для создания контактных форм на WordPress. Он прост в использовании и позволяет создавать многостраничные формы с помощью простого кода. Плагин поддерживает CAPTCHA и Akismet для защиты от спама.",
+      "image": "product/photo/contact-form-7-vs-ninja-forms.png",
+      "category": 15,
+      "price": "0.00",
+      "created_at": "2025-09-03",
+      "updated_at": "2025-09-03",
+      "views_counter": 0
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 33,
+    "fields": {
+      "name": "WPForms",
+      "description": "WPForms — это интуитивно понятный конструктор форм, который позволяет создавать формы с помощью перетаскивания элементов. Он предлагает множество шаблонов, интеграцию с платежными системами и возможность создания многошаговых форм.",
+      "image": "product/photo/wpforms_imuoofL.png",
+      "category": 15,
+      "price": "39.50",
+      "created_at": "2025-09-03",
+      "updated_at": "2025-09-03",
+      "views_counter": 0
+    }
+  }
 ]
