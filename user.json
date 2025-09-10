@@ -1,0 +1,71 @@
+[
+  {
+    "model": "users.user",
+    "pk": 14,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$qAQ5AEskrBR2CTLExlYsMQ$qi/fJNzhnUN0fXSVg5287dRS0xDoSCBDBvamh2rSn+I=",
+      "last_login": "2025-09-09T05:12:46.295Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-09-02T11:35:31Z",
+      "email": "catkety@yandex.ru",
+      "phone_number": null,
+      "avatar": "",
+      "country": null,
+      "token": "1a6e5dffa0dc5e1839a8b5c0ac44b7a6",
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 15,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$68pJURpUohNTmt5ECqGPsj$ine4SQi8aCCyfoBRylemii6NJUT+FT8ioFZJ7T2Hn00=",
+      "last_login": "2025-09-10T03:30:04.307Z",
+      "is_superuser": true,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-09-07T18:57:26Z",
+      "email": "and3vasya@yandex.ru",
+      "phone_number": null,
+      "avatar": "",
+      "country": null,
+      "token": null,
+      "groups": [
+        1
+      ],
+      "user_permissions": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 17,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$OvgcCjeTyEJAdZNkSE8fBd$hsl7CjDHbKFy880eg8BbiZXhemMIKe0INX6h96ADxIw=",
+      "last_login": "2025-09-10T03:27:51.787Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-09-09T05:19:41.532Z",
+      "email": "admin@sky.com",
+      "phone_number": null,
+      "avatar": "",
+      "country": null,
+      "token": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

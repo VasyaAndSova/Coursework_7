@@ -7,7 +7,7 @@ from catalog.models import Product
 class ProductForm(ModelForm):
     class Meta:
         model = Product
-        fields = ["name", "description", "category", "price", "image"]
+        fields = ["name", "description", "category", "price", "image", "is_published"]
 
     def __init__(self, *args, **kwargs):
         super(ProductForm, self).__init__(*args, **kwargs)
@@ -57,3 +57,9 @@ class ProductForm(ModelForm):
         elif price < 0:
             raise ValidationError("Стоимость не может быть отрицательной")
         return price
+
+
+class ProductModeratorForm(ModelForm):
+    class Meta:
+        model = Product
+        fields = ["is_published"]
