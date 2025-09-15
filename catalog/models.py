@@ -1,5 +1,7 @@
 from django.db import models
 
+from config import settings
+
 
 class Product(models.Model):
     name = models.CharField(max_length=100, verbose_name="Наименование продукта")
@@ -32,10 +34,20 @@ class Product(models.Model):
         verbose_name="Счетчик просмотров", help_text="Укажите количество просмотров", default=0
     )
 
+    is_published = models.BooleanField(default=False, verbose_name="Опубликовано")
+    owner = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        verbose_name="Владелец продукта",
+        related_name="products",
+        null=True,
+    )
+
     class Meta:
         verbose_name = "Продукт"
         verbose_name_plural = "Продукты"
         ordering = ["name", "category"]
+        permissions = [("can_unpublish_product", "Can unpublish product")]
 
     def __str__(self):
         return self.name
