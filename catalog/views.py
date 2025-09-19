@@ -1,19 +1,39 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.cache import cache
 from django.core.exceptions import PermissionDenied
 from django.urls import reverse, reverse_lazy
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, TemplateView, UpdateView
 
 from catalog.forms import ProductForm, ProductModeratorForm
-from catalog.models import Product
+from catalog.models import Category, Product
+from catalog.services import ProductService
 
 
 class ProductListView(ListView):
     model = Product
 
     def get_queryset(self):
-        return Product.objects.filter(is_published=True)
+        category_id = self.kwargs.get("category_id")
+        cache_key = f"product_queryset_{category_id}" if category_id else "product_queryset"
+
+        queryset = cache.get(cache_key)
+        if not queryset:
+            if category_id:
+                queryset = ProductService.get_product_list(category_id)
+            else:
+                queryset = super().get_queryset().filter(is_published=True)
+            cache.set(cache_key, queryset, 60 * 15)
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["categories"] = Category.objects.all()
+        return context
 
 
+@method_decorator(cache_page(60 * 15), name="dispatch")
 class ProductDetail(DetailView):
     model = Product
 

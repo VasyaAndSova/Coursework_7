@@ -22,6 +22,7 @@
     .btn-group {
         margin-top: auto;
     }
+
 </style>
 
 <section class="text-center container">
@@ -30,6 +31,20 @@
         <a href="{% url 'catalog:product_create' %}" class="btn btn-primary my-2">Создать продукт</a>
     </p>
     {% endif %}
+</section>
+<section class="text-center container">
+
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Выберите категорию
+  </button>
+  <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="{% url 'catalog:product_list' %}">Все продукты</a></li>
+      {% for category in categories %}
+    <li><a class="dropdown-item" href="{% url 'catalog:product_list_by_category' category.pk %}">{{ category.name }}</a></li>
+      {% endfor %}
+  </ul>
+</div>
 </section>
 <div class="album py-5 bg-body-tertiary">
     <div class="container">
