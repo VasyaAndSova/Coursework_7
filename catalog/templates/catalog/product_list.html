@@ -22,7 +22,6 @@
     .btn-group {
         margin-top: auto;
     }
-
 </style>
 
 <section class="text-center container">
@@ -32,20 +31,7 @@
     </p>
     {% endif %}
 </section>
-<section class="text-center container">
-
-    <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Выберите категорию
-  </button>
-  <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="{% url 'catalog:product_list' %}">Все продукты</a></li>
-      {% for category in categories %}
-    <li><a class="dropdown-item" href="{% url 'catalog:product_list_by_category' category.pk %}">{{ category.name }}</a></li>
-      {% endfor %}
-  </ul>
-</div>
-</section>
+{% include 'catalog/product_list_by_category.html' %}
 <div class="album py-5 bg-body-tertiary">
     <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
